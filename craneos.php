@@ -1,3 +1,8 @@
+<?php
+require_once "modelo/Craneos.php";
+$row = Craneos::mostrarProducto();
+?>
+
 <div class="tienda">
 <div class="tienda-menu">
 <h3>Cráneos</h3>
@@ -54,58 +59,25 @@
     </div>
     <a name="craneosclasicos"></a>
     <div class="productos-sec">
+
+    <?php
+    foreach($row as $dato){
+    ?>
         <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneocar.jpg" alt="craneocarnotauro"></a>
-            <a href="producto.php"><h4>Craneo Carnotauro</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneogig.jpg" alt="craneogiganotosaurio"></a>
-            <a href="producto.php"><h4>Craneo Giganotosaurio</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneotre.jpg" alt="craneotrex"></a>
-            <a href="producto.php"><h4>Craneo Tyranosaurus Rex</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneotri.jpg" alt="craneotriceratops"></a>
-            <a href="producto.php"><h4>Craneo Triceratops</h4></a>
-            <p>texto</p>
-            
-        </div>
+        
+        <a href="producto.php?imagen=<?php echo $dato['imagen'] ; ?>">
+        
+        
+        <img src="<?php echo $dato['imagen']; ?>" alt="craneocarnotauro"></a>
+            <a href="producto.php"><h4><?php echo $dato['nombre']; ?></h4></a>
+            <p><?php echo $dato['descripcion'];?></p>
+            </div>
+    <?php    }
+    ?>
+        
      </div>
      <!--<a name="craneosglow"></a>-->
-     <div class="productos-sec">
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneomos.jpg" alt="craneomosasaurio"></a>
-            <a href="producto.php"><h4>Craneo Mosasaurio</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneorap.jpg" alt="craneoraptor"></a>
-            <a href="producto.php"><h4>Craneo Raptor</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneosmi.jpg" alt="craneosmilodon"></a>
-            <a href="producto.php"><h4>Craneo Smilodon</h4></a>
-            <p>texto</p>
-            
-        </div>
-        <div class="producto">
-        <a href="producto.php"><img src="imagenes/craneokel.jpg" alt="craneokelenken"></a>
-            <a href="producto.php"><h4>Craneo Kelenken</h4></a>
-            <p>texto</p>
-            
-        </div>
-     </div>
+    
 
 </div>
 

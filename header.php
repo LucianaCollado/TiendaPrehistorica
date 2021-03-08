@@ -35,6 +35,6 @@
         <ul>
         <li><a href="tienda.php">Tienda</a></li>
         <li><a href="nosotros.php">Sobre nosotros</a></li>
-        <li><a href="contacto2.php">Contacto</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
         </ul>
      </nav>
